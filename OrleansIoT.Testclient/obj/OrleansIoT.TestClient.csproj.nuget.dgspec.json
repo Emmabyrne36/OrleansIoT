@@ -1,0 +1,154 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\OrleansIoT\\OrleansIoT.Testclient\\OrleansIoT.TestClient.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\OrleansIoT\\OrleansIoT.GrainInterfaces\\OrleansIoT.GrainInterfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\OrleansIoT\\OrleansIoT.GrainInterfaces\\OrleansIoT.GrainInterfaces.csproj",
+        "projectName": "OrleansIoT.GrainInterfaces",
+        "projectPath": "C:\\Projects\\OrleansIoT\\OrleansIoT.GrainInterfaces\\OrleansIoT.GrainInterfaces.csproj",
+        "packagesPath": "C:\\Users\\byrne-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\OrleansIoT\\OrleansIoT.GrainInterfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\byrne-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Orleans.Client": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "Microsoft.Orleans.CodeGenerator.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "Microsoft.Orleans.Core.Abstractions": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\OrleansIoT\\OrleansIoT.Testclient\\OrleansIoT.TestClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\OrleansIoT\\OrleansIoT.Testclient\\OrleansIoT.TestClient.csproj",
+        "projectName": "OrleansIoT.TestClient",
+        "projectPath": "C:\\Projects\\OrleansIoT\\OrleansIoT.Testclient\\OrleansIoT.TestClient.csproj",
+        "packagesPath": "C:\\Users\\byrne-5\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\OrleansIoT\\OrleansIoT.Testclient\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\byrne-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\OrleansIoT\\OrleansIoT.GrainInterfaces\\OrleansIoT.GrainInterfaces.csproj": {
+                "projectPath": "C:\\Projects\\OrleansIoT\\OrleansIoT.GrainInterfaces\\OrleansIoT.GrainInterfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Orleans.Client": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
