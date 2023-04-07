@@ -29,7 +29,7 @@ namespace OrleansGeneratedCode
         public void Populate(global::Orleans.Serialization.SerializerFeature feature)
         {
             feature.AddKnownType("OrleansIoT.GrainClasses.DeviceGrain,OrleansIoT.GrainClasses", "OrleansIoT.GrainClasses.DeviceGrain");
-            feature.AddKnownType("OrleansIoT.GrainClasses.DeviceGrainState,OrleansIoT.GrainClasses", "OrleansIoT.GrainClasses.DeviceGrainState");
+            feature.AddKnownType("OrleansIoT.GrainClasses.States.DeviceGrainState,OrleansIoT.GrainClasses", "OrleansIoT.GrainClasses.States.DeviceGrainState");
             feature.AddKnownType("Microsoft.CodeAnalysis.EmbeddedAttribute,OrleansIoT.Core", "Microsoft.CodeAnalysis.EmbeddedAttribute");
             feature.AddKnownType("System.Runtime.CompilerServices.NullableAttribute", "NullableAttribute");
             feature.AddKnownType("System.Runtime.CompilerServices.NullableContextAttribute", "NullableContextAttribute");
