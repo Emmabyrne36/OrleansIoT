@@ -9,11 +9,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Orleans.Client" Version="3.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrleansIoT.Core\OrleansIoT.Core\OrleansIoT.Core.csproj" />
     <ProjectReference Include="..\OrleansIoT.GrainInterfaces\OrleansIoT.GrainInterfaces.csproj" />
   </ItemGroup>
 

@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrleansIoT.TestSilo", "Orle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrleansIoT.TestClient", "OrleansIoT.Testclient\OrleansIoT.TestClient.csproj", "{4178B483-5DDF-4F5A-9F3E-2CD03CB5A2D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrleansIoT.Core", "OrleansIoT.Core\OrleansIoT.Core\OrleansIoT.Core.csproj", "{E8FEC3FD-C9E6-48FA-AAF0-B9C54DC4E76B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansIoT.Core", "OrleansIoT.Core\OrleansIoT.Core.csproj", "{DDBF820F-0760-4EB2-9924-CFE779AE45AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrleansIoT.FileStorage", "FileStorage\OrleansIoT.FileStorage\OrleansIoT.FileStorage.csproj", "{70EDB2BF-8EB5-4D7A-B675-9615BA23E8B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansIoT.FileStorage", "OrleansIoT.FileStorage\OrleansIoT.FileStorage.csproj", "{4B359F77-B95C-4B3C-9169-4F74F704AC78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{4178B483-5DDF-4F5A-9F3E-2CD03CB5A2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4178B483-5DDF-4F5A-9F3E-2CD03CB5A2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4178B483-5DDF-4F5A-9F3E-2CD03CB5A2D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E8FEC3FD-C9E6-48FA-AAF0-B9C54DC4E76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8FEC3FD-C9E6-48FA-AAF0-B9C54DC4E76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8FEC3FD-C9E6-48FA-AAF0-B9C54DC4E76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8FEC3FD-C9E6-48FA-AAF0-B9C54DC4E76B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70EDB2BF-8EB5-4D7A-B675-9615BA23E8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70EDB2BF-8EB5-4D7A-B675-9615BA23E8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70EDB2BF-8EB5-4D7A-B675-9615BA23E8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70EDB2BF-8EB5-4D7A-B675-9615BA23E8B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDBF820F-0760-4EB2-9924-CFE779AE45AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDBF820F-0760-4EB2-9924-CFE779AE45AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDBF820F-0760-4EB2-9924-CFE779AE45AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDBF820F-0760-4EB2-9924-CFE779AE45AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B359F77-B95C-4B3C-9169-4F74F704AC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B359F77-B95C-4B3C-9169-4F74F704AC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B359F77-B95C-4B3C-9169-4F74F704AC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B359F77-B95C-4B3C-9169-4F74F704AC78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,18 +3,9 @@ using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Configuration;
 using Orleans.Hosting;
-using System.Net;
-using OrleansIoT.TestSilo.Extensions;
 using OrleansIoT.Core.Constants;
-
-
-using System;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-using Orleans;
-using Orleans.Configuration;
-using Orleans.Hosting;
-using Orleans.Providers;
+using OrleansIoT.TestSilo.Extensions;
+using System.Net;
 
 try
 {
@@ -38,7 +29,7 @@ static async Task<IHost> BuildAndStartSiloAsync()
         .UseOrleans(builder =>
         {
             builder.UseLocalhostClustering()
-                .AddFileGrainStorage(OrleansIoTProviders.FileStorageProvider, opts =>
+                .AddFileGrainStorage(OrleansIoTStorageProviders.FileStorageProvider, opts =>
                 {
                     opts.RootDirectory = "C:\\data\\orleansIoT";
                 })

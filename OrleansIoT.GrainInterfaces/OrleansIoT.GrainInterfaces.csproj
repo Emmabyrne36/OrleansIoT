@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrleansIoT.Core\OrleansIoT.Core\OrleansIoT.Core.csproj" />
+    <ProjectReference Include="..\OrleansIoT.Core\OrleansIoT.Core.csproj" />
   </ItemGroup>
 
 </Project>

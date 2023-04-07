@@ -7,17 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
 	  <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" Version="3.7.0">
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-
-    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="3.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrleansIoT.Core\OrleansIoT.Core\OrleansIoT.Core.csproj" />
     <ProjectReference Include="..\OrleansIoT.GrainInterfaces\OrleansIoT.GrainInterfaces.csproj" />
   </ItemGroup>
 

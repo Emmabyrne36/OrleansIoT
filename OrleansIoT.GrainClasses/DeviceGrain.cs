@@ -14,7 +14,7 @@ public class DeviceGrain : Grain, IDeviceGrain
     private readonly IPersistentState<DeviceGrainState> _profile;
 
     public DeviceGrain(
-        [PersistentState(nameof(DeviceGrain), OrleansIoTProviders.FileStorageProvider)] IPersistentState<DeviceGrainState> profile)
+        [PersistentState(nameof(DeviceGrain), OrleansIoTStorageProviders.FileStorageProvider)] IPersistentState<DeviceGrainState> profile)
     {
         _profile = profile;
     }
