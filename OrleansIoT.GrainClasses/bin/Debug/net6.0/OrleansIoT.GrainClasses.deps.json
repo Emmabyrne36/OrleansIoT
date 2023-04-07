@@ -342,6 +342,9 @@
       "System.Threading.Tasks.Extensions/4.5.4": {},
       "System.ValueTuple/4.5.0": {},
       "OrleansIoT.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Orleans.Core": "3.7.0"
+        },
         "runtime": {
           "OrleansIoT.Core.dll": {}
         }
@@ -349,7 +352,8 @@
       "OrleansIoT.GrainInterfaces/1.0.0": {
         "dependencies": {
           "Microsoft.Orleans.Client": "3.7.0",
-          "Microsoft.Orleans.Core.Abstractions": "3.7.0"
+          "Microsoft.Orleans.Core.Abstractions": "3.7.0",
+          "OrleansIoT.Core": "1.0.0"
         },
         "runtime": {
           "OrleansIoT.GrainInterfaces.dll": {}

@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.Orleans.Client": "3.7.0",
           "Microsoft.Orleans.CodeGenerator.MSBuild": "3.7.0",
-          "Microsoft.Orleans.Core.Abstractions": "3.7.0"
+          "Microsoft.Orleans.Core.Abstractions": "3.7.0",
+          "OrleansIoT.Core": "1.0.0"
         },
         "runtime": {
           "OrleansIoT.GrainInterfaces.dll": {}
@@ -338,7 +339,15 @@
       },
       "System.Threading.Channels/6.0.0": {},
       "System.Threading.Tasks.Extensions/4.5.4": {},
-      "System.ValueTuple/4.5.0": {}
+      "System.ValueTuple/4.5.0": {},
+      "OrleansIoT.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Orleans.Core": "3.7.0"
+        },
+        "runtime": {
+          "OrleansIoT.Core.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -633,6 +642,11 @@
       "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "OrleansIoT.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

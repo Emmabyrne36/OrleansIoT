@@ -647,6 +647,9 @@
       "OrleansIoT.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Orleans.Core": "3.7.0"
+        },
         "compile": {
           "bin/placeholder/OrleansIoT.Core.dll": {}
         },
@@ -659,7 +662,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.Orleans.Client": "3.7.0",
-          "Microsoft.Orleans.Core.Abstractions": "3.7.0"
+          "Microsoft.Orleans.Core.Abstractions": "3.7.0",
+          "OrleansIoT.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/OrleansIoT.GrainInterfaces.dll": {}

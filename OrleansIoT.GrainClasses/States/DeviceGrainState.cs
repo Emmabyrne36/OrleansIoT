@@ -9,4 +9,5 @@ public class DeviceGrainState : IDeviceGrainState
     public string ETag { get; set; }
     public bool RecordExists { get; set; }
     public double LastValue { get; set; }
+    public string? System { get; set; }
 }

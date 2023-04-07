@@ -11,7 +11,7 @@
 using global::Orleans;
 
 [assembly: global::Orleans.Metadata.FeaturePopulatorAttribute(typeof(OrleansGeneratedCode.OrleansCodeGenOrleansIoT_GrainClassesFeaturePopulator))]
-[assembly: global::Orleans.CodeGeneration.OrleansCodeGenerationTargetAttribute("OrleansIoT.GrainClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"), global::Orleans.CodeGeneration.OrleansCodeGenerationTargetAttribute("OrleansIoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
+[assembly: global::Orleans.CodeGeneration.OrleansCodeGenerationTargetAttribute("OrleansIoT.GrainClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null")]
 namespace OrleansGeneratedCode
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("OrleansCodeGen", "2.0.0.0")]
@@ -23,16 +23,17 @@ namespace OrleansGeneratedCode
 
         public void Populate(global::Orleans.Metadata.GrainClassFeature feature)
         {
+            feature.Classes.Add(new global::Orleans.Metadata.GrainClassMetadata(typeof(global::OrleansIoT.GrainClasses.DecodeGrain)));
             feature.Classes.Add(new global::Orleans.Metadata.GrainClassMetadata(typeof(global::OrleansIoT.GrainClasses.DeviceGrain)));
+            feature.Classes.Add(new global::Orleans.Metadata.GrainClassMetadata(typeof(global::OrleansIoT.GrainClasses.SystemGrain)));
         }
 
         public void Populate(global::Orleans.Serialization.SerializerFeature feature)
         {
+            feature.AddKnownType("OrleansIoT.GrainClasses.DecodeGrain,OrleansIoT.GrainClasses", "OrleansIoT.GrainClasses.DecodeGrain");
             feature.AddKnownType("OrleansIoT.GrainClasses.DeviceGrain,OrleansIoT.GrainClasses", "OrleansIoT.GrainClasses.DeviceGrain");
+            feature.AddKnownType("OrleansIoT.GrainClasses.SystemGrain,OrleansIoT.GrainClasses", "OrleansIoT.GrainClasses.SystemGrain");
             feature.AddKnownType("OrleansIoT.GrainClasses.States.DeviceGrainState,OrleansIoT.GrainClasses", "OrleansIoT.GrainClasses.States.DeviceGrainState");
-            feature.AddKnownType("Microsoft.CodeAnalysis.EmbeddedAttribute,OrleansIoT.Core", "Microsoft.CodeAnalysis.EmbeddedAttribute");
-            feature.AddKnownType("System.Runtime.CompilerServices.NullableAttribute", "NullableAttribute");
-            feature.AddKnownType("System.Runtime.CompilerServices.NullableContextAttribute", "NullableContextAttribute");
         }
     }
 }

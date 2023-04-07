@@ -42,6 +42,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Orleans.Core": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -169,7 +175,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projects\\OrleansIoT\\OrleansIoT.Core\\OrleansIoT.Core\\OrleansIoT.Core.csproj": {
+                "projectPath": "C:\\Projects\\OrleansIoT\\OrleansIoT.Core\\OrleansIoT.Core\\OrleansIoT.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -5,8 +5,10 @@ AssemblyName:OrleansIoT.GrainClasses
 OutputType:Library
 TargetPath:C:\Projects\OrleansIoT\OrleansIoT.GrainClasses\bin\Debug\net6.0\OrleansIoT.GrainClasses.dll
 CodeGenOutputFile:C:\Projects\OrleansIoT\OrleansIoT.GrainClasses\obj\Debug\net6.0\OrleansIoT.GrainClasses.orleans.g.cs
+Compile:C:\Projects\OrleansIoT\OrleansIoT.GrainClasses\DecodeGrain.cs
 Compile:C:\Projects\OrleansIoT\OrleansIoT.GrainClasses\DeviceGrain.cs
 Compile:C:\Projects\OrleansIoT\OrleansIoT.GrainClasses\States\DeviceGrainState.cs
+Compile:C:\Projects\OrleansIoT\OrleansIoT.GrainClasses\SystemGrain.cs
 Compile:C:\Projects\OrleansIoT\OrleansIoT.GrainClasses\obj\Debug\net6.0\OrleansIoT.GrainClasses.GlobalUsings.g.cs
 Reference:C:\Users\byrne-5\.nuget\packages\microsoft.aspnetcore.connections.abstractions\6.0.0\lib\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 Reference:C:\Users\byrne-5\.nuget\packages\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -193,4 +195,4 @@ Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.15\ref\net
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.15\ref\net6.0\System.Xml.XPath.XDocument.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\6.0.15\ref\net6.0\WindowsBase.dll
 DefineConstants:TRACE,DEBUG,NET,NET6_0,NETCOREAPP
-InputHash:71d318dd8ff07002d399af8c7bf929b30dddb18c
+InputHash:20b0c380597ea9375ee20385ba0c7dd5ba71c525

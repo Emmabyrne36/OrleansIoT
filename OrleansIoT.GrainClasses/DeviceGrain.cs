@@ -1,11 +1,14 @@
 ﻿using Orleans;
+using Orleans.Concurrency;
 using Orleans.Runtime;
 using OrleansIoT.Core.Constants;
+using OrleansIoT.Core.GrainObjects;
 using OrleansIoT.GrainClasses.States;
 using OrleansIoT.GrainInterfaces;
 
 namespace OrleansIoT.GrainClasses;
 
+[Reentrant]
 public class DeviceGrain : Grain, IDeviceGrain
 {
     private readonly IPersistentState<DeviceGrainState> _profile;
@@ -37,6 +40,17 @@ public class DeviceGrain : Grain, IDeviceGrain
             _profile.State.LastValue = value;
             await _profile.WriteStateAsync();
         }
+
+        var systemGrain = GrainFactory.GetGrain<ISystemGrain>(0, _profile.State.System ?? OrleansIoTConstants.DefaultDevice);
+        var temperatureReading = new TemperatureReading(this.GetPrimaryKeyLong(), DateTime.UtcNow, value);
+
+        await systemGrain.SetTemperature(temperatureReading);
+    }
+
+    public Task JoinSystem(string name)
+    {
+        _profile.State.System = name;
+        return _profile.WriteStateAsync();
     }
 }
 

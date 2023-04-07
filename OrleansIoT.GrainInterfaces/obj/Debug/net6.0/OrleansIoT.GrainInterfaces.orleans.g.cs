@@ -11,9 +11,96 @@
 using global::Orleans;
 
 [assembly: global::Orleans.Metadata.FeaturePopulatorAttribute(typeof(OrleansGeneratedCode.OrleansCodeGenOrleansIoT_GrainInterfacesFeaturePopulator))]
-[assembly: global::Orleans.CodeGeneration.OrleansCodeGenerationTargetAttribute("OrleansIoT.GrainInterfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null")]
+[assembly: global::Orleans.CodeGeneration.OrleansCodeGenerationTargetAttribute("OrleansIoT.GrainInterfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"), global::Orleans.CodeGeneration.OrleansCodeGenerationTargetAttribute("OrleansIoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 namespace OrleansIoT.GrainInterfaces
 {
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("OrleansCodeGen", "2.0.0.0"), global::Orleans.CodeGeneration.MethodInvokerAttribute(typeof(global::OrleansIoT.GrainInterfaces.IDecodeGrain), unchecked((int)0x89680407)), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
+    internal class OrleansCodeGenDecodeGrainMethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
+    {
+        public async global::System.Threading.Tasks.Task<object> Invoke(global::Orleans.Runtime.IAddressable grain, global::Orleans.CodeGeneration.InvokeMethodRequest request)
+        {
+            int interfaceId = request.InterfaceId;
+            int methodId = request.MethodId;
+            var arguments = request.Arguments;
+            switch (interfaceId)
+            {
+                case unchecked((int)0x89680407):
+                {
+                    var casted = ((global::OrleansIoT.GrainInterfaces.IDecodeGrain)grain);
+                    switch (methodId)
+                    {
+                        case (int)0x2C39F42:
+                            await casted.Decode((string)arguments[0]);
+                            return null;
+                        default:
+                            ThrowMethodNotImplemented(interfaceId, methodId);
+                            return null;
+                    }
+                }
+
+                default:
+                    ThrowInterfaceNotImplemented(interfaceId);
+                    return null;
+            }
+
+            void ThrowInterfaceNotImplemented(int i) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}");
+            void ThrowMethodNotImplemented(int i, int m) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}, MethodId: 0x{m:X}");
+        }
+
+        public int InterfaceId => unchecked((int)0x89680407);
+        public ushort InterfaceVersion => 0;
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("OrleansCodeGen", "2.0.0.0"), global::System.SerializableAttribute, global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute, global::Orleans.CodeGeneration.GrainReferenceAttribute(typeof(global::OrleansIoT.GrainInterfaces.IDecodeGrain))]
+    internal class OrleansCodeGenDecodeGrainReference : global::Orleans.Runtime.GrainReference, global::OrleansIoT.GrainInterfaces.IDecodeGrain
+    {
+        OrleansCodeGenDecodeGrainReference(global::Orleans.Runtime.GrainReference other) : base(other)
+        {
+        }
+
+        OrleansCodeGenDecodeGrainReference(global::Orleans.Runtime.GrainReference other, global::Orleans.CodeGeneration.InvokeMethodOptions invokeMethodOptions) : base(other, invokeMethodOptions)
+        {
+        }
+
+        OrleansCodeGenDecodeGrainReference(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : base(info, context)
+        {
+        }
+
+        public override int InterfaceId => unchecked((int)0x89680407);
+        public override ushort InterfaceVersion => 0;
+        public override string InterfaceName => "IDecodeGrain";
+        public override bool IsCompatible(int interfaceId) => interfaceId == unchecked((int)0x89680407);
+        public override string GetMethodName(int interfaceId, int methodId)
+        {
+            switch (interfaceId)
+            {
+                case unchecked((int)0x89680407):
+                {
+                    switch (methodId)
+                    {
+                        case (int)0x2C39F42:
+                            return "Decode";
+                        default:
+                            ThrowMethodNotImplemented(interfaceId, methodId);
+                            return null;
+                    }
+                }
+
+                default:
+                    ThrowInterfaceNotImplemented(interfaceId);
+                    return null;
+            }
+
+            void ThrowInterfaceNotImplemented(int i) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}");
+            void ThrowMethodNotImplemented(int i, int m) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}, MethodId: 0x{m:X}");
+        }
+
+        global::System.Threading.Tasks.Task global::OrleansIoT.GrainInterfaces.IDecodeGrain.Decode(string message0)
+        {
+            return base.InvokeMethodAsync<object>((int)0x2C39F42, new object[]{message0});
+        }
+    }
+
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("OrleansCodeGen", "2.0.0.0"), global::Orleans.CodeGeneration.MethodInvokerAttribute(typeof(global::OrleansIoT.GrainInterfaces.IDeviceGrain), unchecked((int)0xFBB04D7D)), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
     internal class OrleansCodeGenDeviceGrainMethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
     {
@@ -31,6 +118,9 @@ namespace OrleansIoT.GrainInterfaces
                     {
                         case unchecked((int)0xEEF2B540):
                             await casted.SetTemperature((double)arguments[0]);
+                            return null;
+                        case unchecked((int)0x918F2AE2):
+                            await casted.JoinSystem((string)arguments[0]);
                             return null;
                         default:
                             ThrowMethodNotImplemented(interfaceId, methodId);
@@ -80,6 +170,8 @@ namespace OrleansIoT.GrainInterfaces
                     {
                         case unchecked((int)0xEEF2B540):
                             return "SetTemperature";
+                        case unchecked((int)0x918F2AE2):
+                            return "JoinSystem";
                         default:
                             ThrowMethodNotImplemented(interfaceId, methodId);
                             return null;
@@ -99,6 +191,98 @@ namespace OrleansIoT.GrainInterfaces
         {
             return base.InvokeMethodAsync<object>(unchecked((int)0xEEF2B540), new object[]{value0});
         }
+
+        global::System.Threading.Tasks.Task global::OrleansIoT.GrainInterfaces.IDeviceGrain.JoinSystem(string name0)
+        {
+            return base.InvokeMethodAsync<object>(unchecked((int)0x918F2AE2), new object[]{name0});
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("OrleansCodeGen", "2.0.0.0"), global::Orleans.CodeGeneration.MethodInvokerAttribute(typeof(global::OrleansIoT.GrainInterfaces.ISystemGrain), (int)0x762B09C4), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
+    internal class OrleansCodeGenSystemGrainMethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
+    {
+        public async global::System.Threading.Tasks.Task<object> Invoke(global::Orleans.Runtime.IAddressable grain, global::Orleans.CodeGeneration.InvokeMethodRequest request)
+        {
+            int interfaceId = request.InterfaceId;
+            int methodId = request.MethodId;
+            var arguments = request.Arguments;
+            switch (interfaceId)
+            {
+                case (int)0x762B09C4:
+                {
+                    var casted = ((global::OrleansIoT.GrainInterfaces.ISystemGrain)grain);
+                    switch (methodId)
+                    {
+                        case unchecked((int)0xB3872744):
+                            await casted.SetTemperature((global::OrleansIoT.Core.GrainObjects.TemperatureReading)arguments[0]);
+                            return null;
+                        default:
+                            ThrowMethodNotImplemented(interfaceId, methodId);
+                            return null;
+                    }
+                }
+
+                default:
+                    ThrowInterfaceNotImplemented(interfaceId);
+                    return null;
+            }
+
+            void ThrowInterfaceNotImplemented(int i) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}");
+            void ThrowMethodNotImplemented(int i, int m) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}, MethodId: 0x{m:X}");
+        }
+
+        public int InterfaceId => (int)0x762B09C4;
+        public ushort InterfaceVersion => 0;
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("OrleansCodeGen", "2.0.0.0"), global::System.SerializableAttribute, global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute, global::Orleans.CodeGeneration.GrainReferenceAttribute(typeof(global::OrleansIoT.GrainInterfaces.ISystemGrain))]
+    internal class OrleansCodeGenSystemGrainReference : global::Orleans.Runtime.GrainReference, global::OrleansIoT.GrainInterfaces.ISystemGrain
+    {
+        OrleansCodeGenSystemGrainReference(global::Orleans.Runtime.GrainReference other) : base(other)
+        {
+        }
+
+        OrleansCodeGenSystemGrainReference(global::Orleans.Runtime.GrainReference other, global::Orleans.CodeGeneration.InvokeMethodOptions invokeMethodOptions) : base(other, invokeMethodOptions)
+        {
+        }
+
+        OrleansCodeGenSystemGrainReference(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : base(info, context)
+        {
+        }
+
+        public override int InterfaceId => (int)0x762B09C4;
+        public override ushort InterfaceVersion => 0;
+        public override string InterfaceName => "ISystemGrain";
+        public override bool IsCompatible(int interfaceId) => interfaceId == (int)0x762B09C4;
+        public override string GetMethodName(int interfaceId, int methodId)
+        {
+            switch (interfaceId)
+            {
+                case (int)0x762B09C4:
+                {
+                    switch (methodId)
+                    {
+                        case unchecked((int)0xB3872744):
+                            return "SetTemperature";
+                        default:
+                            ThrowMethodNotImplemented(interfaceId, methodId);
+                            return null;
+                    }
+                }
+
+                default:
+                    ThrowInterfaceNotImplemented(interfaceId);
+                    return null;
+            }
+
+            void ThrowInterfaceNotImplemented(int i) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}");
+            void ThrowMethodNotImplemented(int i, int m) => throw new global::System.NotImplementedException($"InterfaceId: 0x{i:X}, MethodId: 0x{m:X}");
+        }
+
+        global::System.Threading.Tasks.Task global::OrleansIoT.GrainInterfaces.ISystemGrain.SetTemperature(global::OrleansIoT.Core.GrainObjects.TemperatureReading temperatureReading0)
+        {
+            return base.InvokeMethodAsync<object>(unchecked((int)0xB3872744), new object[]{temperatureReading0});
+        }
     }
 }
 
@@ -109,7 +293,9 @@ namespace OrleansGeneratedCode
     {
         public void Populate(global::Orleans.Metadata.GrainInterfaceFeature feature)
         {
+            feature.Interfaces.Add(new global::Orleans.Metadata.GrainInterfaceMetadata(typeof(global::OrleansIoT.GrainInterfaces.IDecodeGrain), typeof(OrleansIoT.GrainInterfaces.OrleansCodeGenDecodeGrainReference), typeof(OrleansIoT.GrainInterfaces.OrleansCodeGenDecodeGrainMethodInvoker), unchecked((int)0x89680407)));
             feature.Interfaces.Add(new global::Orleans.Metadata.GrainInterfaceMetadata(typeof(global::OrleansIoT.GrainInterfaces.IDeviceGrain), typeof(OrleansIoT.GrainInterfaces.OrleansCodeGenDeviceGrainReference), typeof(OrleansIoT.GrainInterfaces.OrleansCodeGenDeviceGrainMethodInvoker), unchecked((int)0xFBB04D7D)));
+            feature.Interfaces.Add(new global::Orleans.Metadata.GrainInterfaceMetadata(typeof(global::OrleansIoT.GrainInterfaces.ISystemGrain), typeof(OrleansIoT.GrainInterfaces.OrleansCodeGenSystemGrainReference), typeof(OrleansIoT.GrainInterfaces.OrleansCodeGenSystemGrainMethodInvoker), (int)0x762B09C4));
         }
 
         public void Populate(global::Orleans.Metadata.GrainClassFeature feature)
@@ -118,9 +304,15 @@ namespace OrleansGeneratedCode
 
         public void Populate(global::Orleans.Serialization.SerializerFeature feature)
         {
-            feature.AddKnownType("OrleansIoT.GrainInterfaces.IDeviceGrain,OrleansIoT.GrainInterfaces", "OrleansIoT.GrainInterfaces.IDeviceGrain");
+            feature.AddKnownType("OrleansIoT.GrainInterfaces.IDecodeGrain,OrleansIoT.GrainInterfaces", "OrleansIoT.GrainInterfaces.IDecodeGrain");
             feature.AddKnownType("System.Threading.Tasks.Task", "Task");
+            feature.AddKnownType("OrleansIoT.GrainInterfaces.IDeviceGrain,OrleansIoT.GrainInterfaces", "OrleansIoT.GrainInterfaces.IDeviceGrain");
             feature.AddKnownType("OrleansIoT.GrainInterfaces.IDeviceGrainState,OrleansIoT.GrainInterfaces", "OrleansIoT.GrainInterfaces.IDeviceGrainState");
+            feature.AddKnownType("OrleansIoT.GrainInterfaces.ISystemGrain,OrleansIoT.GrainInterfaces", "OrleansIoT.GrainInterfaces.ISystemGrain");
+            feature.AddKnownType("OrleansIoT.Core.GrainObjects.TemperatureReading,OrleansIoT.Core", "OrleansIoT.Core.GrainObjects.TemperatureReading");
+            feature.AddKnownType("Microsoft.CodeAnalysis.EmbeddedAttribute,OrleansIoT.Core", "Microsoft.CodeAnalysis.EmbeddedAttribute");
+            feature.AddKnownType("System.Runtime.CompilerServices.NullableAttribute", "NullableAttribute");
+            feature.AddKnownType("System.Runtime.CompilerServices.NullableContextAttribute", "NullableContextAttribute");
         }
     }
 }
