@@ -40,7 +40,6 @@ public class DeviceGrain : Grain, IDeviceGrain
     }
 }
 
-
 //[StorageProvider(ProviderName = OrleansIoTConstants.FileStorageProvider)]
 //public class DeviceGrain : Grain<DeviceGrainState>, IDeviceGrain
 //{
