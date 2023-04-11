@@ -8,4 +8,5 @@ public interface ISystemGrain : IGrainWithIntegerCompoundKey
     Task SetTemperature(TemperatureReading temperatureReading);
     Task Subscribe(ISystemObserver observer);
     Task Unsubscribe(ISystemObserver observer);
+    Task<double> GetTemperature();
 }

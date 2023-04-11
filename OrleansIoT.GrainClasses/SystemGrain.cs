@@ -51,6 +51,16 @@ public class SystemGrain : Grain, ISystemGrain
         return Task.CompletedTask;
     }
 
+    public Task<double> GetTemperature()
+    {
+        if (_temperatures.Count == 0)
+        {
+            return (Task<double>)Task.CompletedTask;
+        }
+
+        return Task.FromResult(_temperatures.Values.Average());
+    }
+
     private Task Callback(object callbackState)
     {
         if (_temperatures.Count == 0)

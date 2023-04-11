@@ -52,6 +52,11 @@ public class DeviceGrain : Grain, IDeviceGrain
         _profile.State.System = name;
         return _profile.WriteStateAsync();
     }
+
+    public Task<double> GetTemperature()
+    {
+        return Task.FromResult(_profile.State.LastValue);
+    }
 }
 
 //[StorageProvider(ProviderName = OrleansIoTConstants.FileStorageProvider)]
