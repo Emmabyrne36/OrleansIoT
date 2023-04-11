@@ -23,4 +23,8 @@
     <ProjectReference Include="..\OrleansIoT.Core\OrleansIoT.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Orleans_CodeGenInputs Remove="ISystemObserver.cs" />
+  </ItemGroup>
+
 </Project>

@@ -3,6 +3,7 @@ using Orleans;
 using Orleans.Configuration;
 using OrleansIoT.Core.Constants;
 using OrleansIoT.GrainInterfaces;
+using OrleansIoT.TestClient.Observers;
 
 try
 {
@@ -40,13 +41,23 @@ static async Task<IClusterClient> ConnectClientAsync()
 
 static async Task DoClientWorkAsync(IGrainFactory grainFactory)
 {
-    AddDevices(grainFactory);
+    //AddDevices(grainFactory);
+    await GetObserver(grainFactory);
     var grain = grainFactory.GetGrain<IDecodeGrain>(0);
 
     while (true)
     {
         await grain.Decode(Console.ReadLine());
     }
+}
+
+static async Task GetObserver(IGrainFactory grainFactory)
+{
+    var systemGrain = grainFactory.GetGrain<ISystemGrain>(0, OrleansIoTConstants.DefaultDevice);
+    var observer = new SystemObserver();
+    var observerRef = await grainFactory.CreateObjectReference<ISystemObserver>(observer);
+
+    await systemGrain.Subscribe(observerRef);
 }
 
 static void AddDevices(IGrainFactory grainFactory)
